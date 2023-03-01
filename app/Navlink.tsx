@@ -1,3 +1,6 @@
+
+
+import Link from 'next/link'
 import React from 'react'
 
 type Props = {
@@ -6,8 +9,11 @@ type Props = {
 }
 
 function Navlink( {category, isActive } : Props) {
+
   return (
-    <div>Navlink</div>
+    <Link href={`/news/${category}`} className={`navlink ${isActive && "underline underline-offset-4 font-bold decoration-orange-400 text-lg"}`}>
+        {category}
+    </Link>
   )
 }
 
